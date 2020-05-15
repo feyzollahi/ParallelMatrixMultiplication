@@ -11,15 +11,14 @@ public class MatrixIndexCounter {
     }
     public int[] count(int count){
         int[] indexes = new int[2];
-        int rowAfter = 0;
 
         if(count - (column - currentK - 1) <= 0){
-            rowAfter = 0;
             indexes[0] = currentI;
             indexes[1] = currentK + count;
             return indexes;
         }
         count -= (column - currentK - 1);
+        int rowAfter;
         rowAfter = ((count - 1) / column);
         count -= rowAfter * column;
         count--;

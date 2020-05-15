@@ -51,10 +51,9 @@ public class Matrix {
             threads.get(i).start();
         }
 
-        int lastThreadI2 = m;
         int lastThreadK2 = 0;
         threads.get(threads.size() - 1).setI1(indexes[threads.size() - 1][0]);
-        threads.get(threads.size() - 1).setI2(lastThreadI2);
+        threads.get(threads.size() - 1).setI2(m);
         threads.get(threads.size() - 1).setK1(indexes[threads.size() - 1][1]);
         threads.get(threads.size() - 1).setK2(lastThreadK2);
 
